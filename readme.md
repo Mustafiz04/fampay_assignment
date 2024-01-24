@@ -4,12 +4,13 @@ submitted by Mustafiz Kaifee
 ## Steps to run this project
 1. Clone or Download this repo.
 2. run `npm i`
-3. create `.env` file in root directory or rename `.env.sample` to `.env`. Add or update the port and database url.
+3. Put API_KEY in `youtubeApiKeys.js` file
+4. create `.env` file in root directory or rename `.env.sample` to `.env`. Add or update the port and database url.
 `	PORT=3000`
 `	DB_URI=mongodb://localhost:27017/fampay_youtube`
-4. To start the server run `npm run start`
-5. Server will start running on the port you specify and start query YouTube video and keep adding into the database.
-6. To test the search and query api. Copy the url or import the curl for that.
+5. To start the server run `npm run start`
+6. Server will start running on the port you specify and start query YouTube video and keep adding into the database.
+7. To test the search and query api. Copy the url or import the curl for that.
 	i. search all video api -> http://localhost:3000/video
 		`curl --location 'http://localhost:3000/video/'`
 	ii search video by query -> http://localhost:3000/video/search?q=india&page=1
