@@ -2,7 +2,7 @@ import express from 'express';
 import connectToMongoDB from './mongodb.js';
 import videoRouter from './routes/videos.js';
 import config from '../config.js';
-import startJobToFetchAndYouTubeVideos from './jobs/index.js';
+import startJobToFetchYouTubeVideos from './jobs/index.js';
 // Import port from config or assign 3000 by default
 const { PORT = 3000 } = config
 
@@ -18,7 +18,7 @@ app.use(express.json());
 app.use('/video', videoRouter)
 
 // Jobs to fetch youtube video and upload data
-// startJobToFetchAndYouTubeVideos()
+startJobToFetchYouTubeVideos()
 
 // Start server
 app.listen(PORT, () => {
